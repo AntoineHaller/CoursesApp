@@ -3,11 +3,11 @@ package email.app.com.appcourses;
 public class Courses{
     private String objet;
     private boolean important;
-    private int quantite;
+    private String quantite;
 
     public Courses(){}
 
-    public Courses(String objet, boolean important, int quantite) {
+    public Courses(String objet, boolean important, String quantite) {
         this.objet = objet;
         this.important = important;
         this.quantite = quantite;
@@ -29,11 +29,11 @@ public class Courses{
         this.important = important;
     }
 
-    public int getQuantite() {
+    public String getQuantite() {
         return quantite;
     }
 
-    public void setQuantite(int quantite) {
+    public void setQuantite(String quantite) {
         this.quantite = quantite;
     }
 }

@@ -13,7 +13,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         //Appelée auto si la bdd existe pas
-        db.execSQL("CREATE TABLE COURSES (objet TEXT, quantite INTEGER, important INTEGER);");
+        db.execSQL("CREATE TABLE COURSES (objet TEXT, quantite TEXT, important INTEGER);");
     }
 
     @Override

@@ -43,7 +43,7 @@ public class Database {
         cv.put("quantite", valeur.getQuantite());
         cv.put("important", valeur.isImportant()?1:0); //1 si vrai 0 si faut
 
-        return this.bdd.insert("ETUDIANT", null, cv);
+        return this.bdd.insert("COURSES", null, cv);
     }
 
     public List<Courses> getAllCourses(){
@@ -57,7 +57,7 @@ public class Database {
             Courses tmp = new Courses();
 
             tmp.setObjet(curseur.getString(curseur.getColumnIndex("objet")));
-            tmp.setQuantite(curseur.getInt(curseur.getColumnIndex("quantite")));
+            tmp.setQuantite(curseur.getString(curseur.getColumnIndex("quantite")));
             tmp.setImportant(curseur.getInt(curseur.getColumnIndex("important"))==1?true:false);
 
             resultat.add(tmp);
