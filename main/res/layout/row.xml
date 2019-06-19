@@ -9,4 +9,10 @@
         android:id="@+id/tv_row_objet"
         android:textSize="22dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_row_quantite"
+        android:textSize="22dp"/>
+
 </LinearLayout>

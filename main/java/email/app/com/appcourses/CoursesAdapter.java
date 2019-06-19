@@ -52,8 +52,12 @@ public class CoursesAdapter extends BaseAdapter {
         TextView tv_objet = convertView.findViewById(R.id.tv_row_objet);
         tv_objet.setText(current.getObjet());
 
+        TextView tv_quantite = convertView.findViewById(R.id.tv_row_quantite);
+        String text = "Quantité: "+current.getQuantite();
+        tv_quantite.setText(text);
+
         if (current.isImportant()){
-            convertView.setBackgroundColor(context.getResources().getColor(R.color.monViolet));
+            convertView.setBackgroundColor(context.getResources().getColor(R.color.monRouge));
         }
 
         if (!current.isImportant()){
