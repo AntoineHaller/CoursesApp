@@ -1,6 +1,7 @@
 package email.app.com.appcourses;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class ListActivity extends AppCompatActivity {
 
     private ListView lv_items;
     private Button btn_ajouter;
+    private Button btn_delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +35,7 @@ public class ListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Courses selected = (Courses) parent.getItemAtPosition(position);
-                Toast toast = Toast.makeText(ListActivity.this, "Nombre: " + selected.getQuantite(), Toast.LENGTH_SHORT);
-                toast.show();
+                //TODO changer couleur selected
             }
         });
 
@@ -46,6 +47,16 @@ public class ListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(ListActivity.this, NewItemActivity.class);
                 startActivity(i);
+            }
+        });
+
+        btn_delete = (Button) findViewById(R.id.btn_delete);
+
+        lv_items.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Courses selected = (Courses) parent.getItemAtPosition(position);
+                //TODO supp selected
             }
         });
 
